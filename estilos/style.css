@@ -1,16 +1,54 @@
 @charset "UTF-8";
 
-body {
-  background-color: aliceblue;
+:root { /* Variáveis de cores */
+  --fundo-principal: #f5f5f5;
+  --texto:#222222;
+  --texto-inverso:#ffffff;
+  --destaque:#0077ff;
+  --destaque-inverso:#66bbff;
+  --fundo-card:#ffffff;
 }
 
+* { /* Reset básico */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  box-sizing: border-box; /* Inclui bordas e padding na largura e altura dos elementos */
+  text-decoration: none; /* Remove sublinhado de links */
+}
 
-/* 
-  Variáveis para cores:
-  --fundo-principal
-  --texto
-  --texto-inverso
-  --destaque
-  --destaque-inverso
-  --fundo-card
-*/
+body {
+  line-height: 1.5em; /* Espaçamento entre linhas */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  color: var(--texto); 
+  background-color: var(--fundo-principal);
+}
+
+header {
+  display: flex; /* Usa flexbox para layout */
+  justify-content: flex-end; /* Alinha itens à direita */
+  align-content: center; /* Centraliza itens verticalmente */
+
+  background-color: var(--destaque); 
+  color: var(--texto); 
+  padding: 20px;
+}
+
+nav#menu ul {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex;
+  gap: 10px; /* Espaçamento entre os itens do menu */
+
+}
+
+nav#menu a { 
+  color: var(--texto-inverso);
+  font-weight: bold;
+  padding: 12px 15px;
+  border-radius: 50%; /* Deixa os links arredondados */
+  transition: background-color .3s, color .3s; /* Transição suave para o efeito hover */
+}
+
+nav#menu a:hover { /* Efeito ao passar o mouse nos links do menu */
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
+}
