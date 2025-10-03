@@ -52,3 +52,87 @@ nav#menu a:hover { /* Efeito ao passar o mouse nos links do menu */
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
+
+main {
+  display: grid; /* Usa grid para layout */
+  grid-template-columns: 1fr 90vw 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+section#ficha {
+  grid-column: 2; /* Centraliza a seção na segunda coluna do grid */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section#ficha img {
+  display: block; /* Remove espaço embaixo da imagem */
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  margin-bottom: 15px;
+
+  border-radius: 50%; 
+  width: 200px;
+  aspect-ratio: 1 / 1; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Corta a imagem para preencher o espaço */
+  overflow: hidden; /* Esconde qualquer parte que ultrapasse o contêiner */
+  border: 5px solid var(--fundo-card);  /* Borda ao redor da imagem */
+  outline: 5px solid var(--destaque); /* Contorno ao redor da imagem */
+  box-shadow: #26394d7a 0px 8px 30px -10px;
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+div#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  gap: 1em;
+  margin-top: 15px;
+
+}
+div#social a {
+  color: var(--destaque);
+  transition: color .3s; /* Transição suave para o efeito hover */
+}
+div#social a:hover {
+  color: var(--destaque-inverso);
+}
+
+section#detalhes {
+  grid-column: 2;
+}
+
+article {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 10px;
+}
+article#video .youtube { /* Contêiner do vídeo */
+  position: relative; /* Necessário para o posicionamento absoluto do iframe */
+  width: 100%; /* Largura total do contêiner */
+  margin: auto; /* Centraliza o contêiner */
+  aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+}
+article#video .youtube iframe { /* Estiliza o iframe do vídeo */
+  position: absolute; /* Posiciona o iframe dentro do contêiner */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
